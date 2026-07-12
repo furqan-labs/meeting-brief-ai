@@ -16,14 +16,15 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-rate-limit": "^7.4.0",
+    "meeting-brief-ai": "file:..",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.9",
-    "supertest": "^7.0.0",
     "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
     "tsx": "^4.16.2",
     "typescript": "^5.5.3",
         "vitest": "^4.1.10"
