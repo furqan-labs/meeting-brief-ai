@@ -1,0 +1,15 @@
+{
+  "name": "meeting-brief-ai",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Turn a raw meeting transcript into a summary, action items, and a follow-up email using Claude.",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "test": "npm test --prefix server && npm test --prefix client",
+    "build": "npm run build --prefix server && npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

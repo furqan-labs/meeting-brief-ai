@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-shell: #10141c;
+  --color-panel: #171d29;
+  --color-panel-border: #2a3242;
+  --color-text: #e9e6dc;
+  --color-text-muted: #8891a3;
+
+  --color-paper: #f6f1e4;
+  --color-paper-border: #ded5bc;
+  --color-ink: #1c2230;
+  --color-ink-muted: #5b5646;
+
+  --color-amber: #d89b3c;
+  --color-amber-soft: #f0c785;
+  --color-rust: #b5473a;
+  --color-sage: #5f7d5a;
+
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-shell);
+    color: var(--color-text);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Faint grid backdrop for the app shell, evokes a technical/ops tool */
+.grid-backdrop {
+  background-image:
+    linear-gradient(rgba(233, 230, 220, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(233, 230, 220, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Subtle paper grain on the memo output card */
+.paper-grain {
+  background-image: radial-gradient(rgba(28, 34, 48, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Rotated "generated" stamp, like an ink stamp on a physical memo */
+.stamp {
+  transform: rotate(-4deg);
+}
