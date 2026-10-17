@@ -16,7 +16,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-rate-limit": "^7.4.0",
-    "meeting-brief-ai": "file:..",
     "zod": "^3.23.8"
   },
   "devDependencies": {
